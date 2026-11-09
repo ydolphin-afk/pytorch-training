@@ -1,0 +1,5 @@
+my_project/
+my_project2/
+.venv/
+__pycache__/
+*.pyc

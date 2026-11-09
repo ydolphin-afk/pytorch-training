@@ -1,0 +1,12 @@
+import numpy as np
+import torch
+
+array = np.array([0,2,5])
+print(array)
+
+tensor1 = torch.from_numpy(array)
+tensor2 = torch.tensor(array)
+
+array[0] = 99
+print(tensor1)
+print(tensor2)

@@ -1,0 +1,13 @@
+import torch
+
+sample_tensor = torch.zeros((2,3,5))
+sample_tensor[1,0,3] = 1
+sample_tensor[0,2,2] = 2
+
+print("Test 1: ",sample_tensor.shape)
+print(sample_tensor)
+
+sample_tensor = torch.permute(sample_tensor, (2,0,1))
+
+print("Test 2: ",sample_tensor, (2,0,1))
+print(sample_tensor)

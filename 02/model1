@@ -1,0 +1,29 @@
+import torch
+from torch import nn
+
+class MyModel(nn.Module):
+
+    def __init__(self, arg1: int, arg2: float):
+        super().__init__()
+        self.arg1 = arg1
+        self.arg2 = arg2
+
+    def forward(self, x):
+        x = x * self.arg1
+        x = x / self.arg2
+
+        return x
+
+if __name__ == "__main__":
+
+    myModel = MyModel(3, 2.0)
+
+    _input = torch.ones([2, 3])
+
+    out1 = myModel(_input)
+    out2 = myModel.forward(_input)
+
+    print("method1")
+    print(out1)
+    print("Method2")
+    print(out2)
