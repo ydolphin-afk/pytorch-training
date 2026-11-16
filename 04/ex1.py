@@ -9,3 +9,6 @@ if __name__ == "__main__":
     file_list = list(dir_path.glob("*"))
     for dir in enumerate(file_list):
         print(dir[1])
+    #3
+    file_list = list(Path(data_dir).glob("**/*.png"))
+    print(len(file_list))
